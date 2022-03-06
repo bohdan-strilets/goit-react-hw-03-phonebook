@@ -34,14 +34,14 @@ class Modal extends Component {
   };
 
   render() {
-    const { children, title } = this.props;
+    const { children, title, onClose } = this.props;
 
     return createPortal(
       <div className={css.backdrop} onClick={this.handleBackdropClick}>
         <div className={css.modal}>
           <div className={css.wrapper}>
             <h2 className={css.title}>{title}</h2>
-            <button className={css.button} type="button">
+            <button className={css.button} type="button" onClick={onClose}>
               <AiOutlineClose />
             </button>
           </div>
