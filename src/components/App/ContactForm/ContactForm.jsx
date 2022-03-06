@@ -32,7 +32,7 @@ class ContactForm extends Component {
     const { name, number } = this.state;
 
     return (
-      <form className={css.form} onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <label className={css.label}>
           <span className={css.title}>Name</span>
           <input
